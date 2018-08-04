@@ -8,11 +8,6 @@ const styles = {
 };
 
 export default class Notes extends Component  {
-//   constructor ( props ) {
-//     super( props );
-//   }
-  
-
   render() {
     const {onDelete} = this.props;
     return (

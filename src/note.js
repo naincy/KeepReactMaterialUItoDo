@@ -8,6 +8,10 @@ import DeleteIcon from '@material-ui/icons/Delete';
 const styles = {
   card: {
     width: "100%",
+  },
+  delete: {
+    float: 'left',
+    paddingBottom: '5px'
   }
 };
 
@@ -29,7 +33,7 @@ export default class Note extends Component  {
             <Typography component="p">
                 {this.props.value.description}
             </Typography>
-            <DeleteIcon onClick={onDelete} />
+            <DeleteIcon style={styles.delete} onClick={onDelete} />
         </CardContent>
     </Card>
   }

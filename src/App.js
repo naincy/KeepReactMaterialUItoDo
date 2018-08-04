@@ -58,9 +58,9 @@ class App extends Component {
           </Toolbar>
         </AppBar>
         
-        <Grid  container item spacing={0} justify="center" >
+        <Grid container item spacing={0} justify="center" >
           <Grid item xs={8}>
-              <TakeNote onNew={this.addNote.bind(this)}  notes={this.state.notes} />
+              <TakeNote onNew={this.addNote.bind(this)} notes={this.state.notes} />
               <Notes notes={this.state.notes} onDelete={this.handleDeleteNote.bind(this)} />
           </Grid>
         </Grid>

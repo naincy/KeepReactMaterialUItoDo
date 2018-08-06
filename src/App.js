@@ -7,10 +7,18 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import TakeNote from './takenote';
 import Notes from './notes';
+import {Link, Route} from 'react-router-dom';
+import Project from './project';
 import './App.css';
+
 const styles = {
   appBar: {
     marginBottom:'20px'
+  },
+  button: {
+    color: 'white',
+    marginLeft: '20px',
+    textDecoration: 'none'
   }
 };
 
@@ -21,13 +29,13 @@ class App extends Component {
       notes: [
         {
           id: 1,
-          title: 'test1',
-          description: 'description1'
+          title: 'React',
+          description: 'Enjoying it!!'
         },
         {
           id: 2,
-          title: 'test2',
-          description: 'description2'
+          title: 'Material UI',
+          description: 'Cool Stuff'
         }
       ]
     }
@@ -53,8 +61,11 @@ class App extends Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit">
-              Keep
-          </Typography>
+            <Link to="/" style={styles.button}>Keep</Link>
+            </Typography>
+            <Typography variant="title" color="inherit">
+              <Link style={styles.button} to="project">Project</Link>
+            </Typography>
           </Toolbar>
         </AppBar>
         
@@ -64,8 +75,8 @@ class App extends Component {
               <Notes notes={this.state.notes} onDelete={this.handleDeleteNote.bind(this)} />
           </Grid>
         </Grid>
-      </div>
-      
+        <Route path="/project" component={Project}/>
+      </div>     
     );
   }
 }

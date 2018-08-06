@@ -2,6 +2,7 @@
   "name": "keepapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://naincy.github.io/KeepReactMaterialUItoDo/",
   "dependencies": {
     "@babel/runtime": "7.0.0-beta.55",
     "@material-ui/core": "^1.4.0",
